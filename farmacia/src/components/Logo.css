@@ -1,0 +1,15 @@
+.logoo {
+    position:fixed;
+    left: 5%;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.logoo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}

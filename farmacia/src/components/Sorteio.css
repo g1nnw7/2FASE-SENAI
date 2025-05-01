@@ -1,0 +1,8 @@
+.container-sorteio{
+    border: 2px var(--cor-4);
+    border-radius: 10px;
+    margin: 25px;
+    padding: 10px;
+
+    display: flex;
+}
