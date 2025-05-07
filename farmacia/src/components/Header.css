@@ -1,34 +1,20 @@
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ce1f3a;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.container-header{
+    height: 70px;
+    background-color: var(--cor-4);
+    color: var(--cor-2);
+
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-around;
-  }
+    /* padding-right: 20px; */
 
-.farma {
-    position: fixed;
-    left: 15%;
-    font-size: 30px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
-.farma:hover {
-    transform: scale(1.1);
+.titulo{
+    width: 100%;
+    text-align: center;
 }
 
-.botaoredi {
-    display: flex;
-    gap: 15px;
-    margin-left: 1400px;
-}
 
 
 

@@ -12,7 +12,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 #root, body, html{
-  min-height: 1--vh;
-  background-color: #e6e6e6;
+  min-height: 100vh;
+  /* background-color: aqua; */
 }

@@ -1,13 +1,13 @@
 import './App.css'
-import Corpo from './components/Corpo'
+import Body from './components/Body'
 import Header from './components/Header'
 
-
 function App() {
+
   return (
-    <div className=''>
-    <Header />
-    <Corpo />
+    <div className='container-app'>
+      <Header />
+      <Body />
     </div>
   )
 }
