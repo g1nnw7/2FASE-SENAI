@@ -1,0 +1,69 @@
+.body{
+ min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.div-central{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 40vw;
+border: solid;
+padding: 50px;
+}
+
+.div-input{
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.div-cima{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+
+.botao-credito{
+background-color: green;
+}
+
+.botao-debito{
+background-color: red;
+}
+
+.botoes{
+  padding: 5px;
+  
+}
+.extrato{
+
+  margin-top: 20px;
+  text-align: center;
+}
+.extratoText{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+} 
+.extratoItem{
+  padding: 10px;
+  border-radius: 6px;
+  background-color: white;
+}
+.extratoItem.credito{
+  border-left: solid green 10px;
+  color: green;
+}
+.extratoItem.debito{
+  border-left: solid red 10px;
+  color: red;
+}
+
