@@ -1,37 +1,41 @@
 import { useState } from 'react'
 
 import './App.css'
-import Header from './components/Header'
+
 
 function App() {
   const[valorInput, setValorInput] = useState('')
   const[valorTotal, setValorTotal] = useState(0)
   const[extrato, setExtrato] = useState([]);
-  const[descricao, setDescricao] = useState('')
+  const[valorDesc, setValorDesc] = useState('')
   
 
   function credito(){
     const valor = Number(valorInput);
+    const desc = valorDesc
     if (!isNaN(valor) && valor > 0) {
       setValorTotal(valorTotal + valor);
-      setExtrato([...extrato, { tipo: 'Crédito', valor }]);
+      setExtrato([...extrato, { tipo: 'Crédito', valor, desc }]);
       setValorInput('');
+      setValorDesc('')
     }
   }
 
   function debito(){
     const valor = Number(valorInput);
+    const desc = valorDesc;
     if (!isNaN(valor) && valor > 0) {
       setValorTotal(valorTotal - valor);
-      setExtrato([...extrato, { tipo: 'Débito', valor }]);
+      setExtrato([...extrato, { tipo: 'Débito', valor, desc }]);
       setValorInput('');
+      setValorDesc('')
     }
   }
 
   return (
     <>
       <div className='container-app'>
-        <Header />
+ 
       </div>
 
 
@@ -45,10 +49,11 @@ function App() {
        </div>
 
         <div className='div-input'>
+        
         Descrição<br></br>
         <input type="text" className='input-descricao' 
-        value={descricao}
-        onChange={(e) => setDescricao(e.target.value)}
+        value={valorDesc}
+        onChange={(e) => setValorDesc(e.target.value)}
         />
 
 
@@ -56,7 +61,7 @@ function App() {
         <input type="Number" className='input-imesada' 
         value={valorInput} 
         onChange={(e) => setValorInput(e.target.value)}
-        
+      
         />
         </div>
 
@@ -73,7 +78,7 @@ function App() {
               <p key={index} 
               className={`extratoItem ${item.tipo === 'Crédito' ? 'credito' : 'debito'}`}
               >
-                {descricao}: R$ {item.valor.toFixed(2)}
+                {item.desc}: R$ {item.valor.toFixed(2)}
               </p>
             ))}
           </div>
